@@ -23,5 +23,5 @@ jobs:
     - name: Deploy
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-      run: echo $ACTIONS_DEPLOY_KEY > deploy && rsync -ruv -e "ssh -i deploy -oStrictHostKeyChecking=no" public/ gh-deploy@45.77.54.56:/var/www/vhosts/paulgessinger.com
+      run: echo $ACTIONS_DEPLOY_KEY > deploy && chmod 400 deploy && rsync -ruv -e "ssh -i deploy -oStrictHostKeyChecking=no" public/ gh-deploy@45.77.54.56:/var/www/vhosts/paulgessinger.com
 
