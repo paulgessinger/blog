@@ -1,0 +1,211 @@
+@import "normalize.scss";
+@import "nord.scss";
+
+$fa-font-path: "{{ .Site.BaseURL }}/webfonts";
+@import "fa/fontawesome.scss";
+@import "fa/brands.scss";
+
+$font-path: "{{ .Site.BaseURL }}/webfonts";
+@import "fonts.scss";
+
+@import "nord_pygments.scss";
+
+$highlight: $nord14;
+
+body {
+  background: $nord1;
+  color: $nord4;
+  font-family: Raleway, sans-serif;
+
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100vh;
+}
+a {
+  color: $nord7;
+  transition: color 0.1 linear;
+
+  &:hover {
+    color: $highlight;
+  }
+}
+
+p {
+  text-align: justify;
+}
+
+.container {
+  padding: 1em;
+  padding-bottom: 4em;
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.highlight {
+  background: $nord0;
+  padding: 0.2em 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans Condensed";
+  margin: 1em 0;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+h4 {
+  font-size: 1.55rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.45rem;
+}
+h6 {
+  font-size: 1.4rem;
+}
+
+.site-title {
+  width: 100%;
+  text-align: center;
+  font-weight: normal;
+  margin: 0;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.site-description {
+  display: flex;
+  align-items: center;
+  font-style: italic;
+  justify-content: stretch;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+
+  h2 {
+    flex: 1;
+    margin: 0;
+    font-weight: normal;
+    font-size: 1.1rem;
+    font-family: Raleway;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  a {
+    display: flex;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0.2em;
+    background: $nord10;
+    color: $nord6;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 0.2em;
+    transition: background 0.1s linear;
+
+    &:hover {
+      background: $highlight;
+    }
+  }
+}
+ul.flat {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline;
+    margin: 0;
+    padding: 0 0.5em;
+  }
+}
+
+nav.main {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 2em;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0.2em 0.5em;
+    transition: color 0.1s linear;
+    transition: background-color 0.1s linear;
+    border-radius: 0.2em;
+
+    &:hover {
+      background-color: $highlight;
+      color: $nord0;
+    }
+  }
+}
+
+ul.posts {
+}
+
+.footer {
+  background: $nord0;
+  padding: 1em;
+  text-align: center;
+  a {
+    color: inherit;
+  }
+}
+
+.recent-posts {
+  .title {
+    @extend h3;
+
+    // color: $nord7;
+    text-decoration: none;
+    display: block;
+    margin: 0.1em 0;
+  }
+
+  .post {
+    margin-bottom: 3em;
+  }
+}
+
+nav.tags {
+  li:first-child {
+    padding-left: 0;
+  }
+}
