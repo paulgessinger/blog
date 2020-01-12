@@ -18,3 +18,5 @@ as IP addresses) to external providers for things as simple as these.
 Other notable absences: **JavaScript** :thumbsup:
 
 The whole thing comes together using [Hugo](https://gohugo.io/), a static site/blog generator written in Go. Still missing: CI and CD (automatic deployment to a web server).
+
+UPDATE: automatic deployment using GitHub actions is working too now!
