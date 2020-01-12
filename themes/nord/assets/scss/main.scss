@@ -4,6 +4,7 @@
 $fa-font-path: "{{ .Site.BaseURL }}/webfonts";
 @import "fa/fontawesome.scss";
 @import "fa/brands.scss";
+@import "fa/regular.scss";
 
 $font-path: "{{ .Site.BaseURL }}/webfonts";
 @import "fonts.scss";
@@ -12,10 +13,13 @@ $font-path: "{{ .Site.BaseURL }}/webfonts";
 
 $highlight: $nord14;
 
+$font-normal: Raleway, sans-serif;
+$font-heading: "Open Sans Condensed";
+
 body {
   background: $nord1;
   color: $nord4;
-  font-family: Raleway, sans-serif;
+  font-family: $font-normal;
 
   font-size: 13px;
   display: flex;
@@ -24,16 +28,52 @@ body {
   min-height: 100vh;
 }
 a {
-  color: $nord7;
+  color: $nord15;
   transition: color 0.1 linear;
 
   &:hover {
-    color: $highlight;
+    color: $nord12;
   }
+}
+
+.draft-label {
+  font-weight: bold;
+  color: $nord12;
 }
 
 p {
   text-align: justify;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.markdown {
+  hyphens: auto;
+  img {
+    max-width: 100%;
+  }
+}
+
+figure {
+  @media (max-width: 400px) {
+    margin: 0;
+  }
+
+  figcaption h4 {
+    font-family: $font-normal;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 0 1em 0;
+  }
+}
+
+.post-header {
+  .meta {
+    color: $nord6;
+    font-style: italic;
+  }
 }
 
 .container {
@@ -56,7 +96,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Open Sans Condensed";
+  font-family: $font-heading;
   margin: 1em 0;
   font-weight: normal;
 }
@@ -156,6 +196,26 @@ ul.flat {
   }
 }
 
+.gh-icon {
+  @extend .fa-github-alt;
+}
+
+.tw-icon {
+  @extend .fa-twitter;
+}
+
+.ig-icon {
+  @extend .fa-instagram;
+}
+
+.li-icon {
+  @extend .fa-linkedin-in;
+}
+
+.xi-icon {
+  @extend .fa-xing;
+}
+
 nav.main {
   display: block;
   width: 100%;
@@ -177,7 +237,10 @@ nav.main {
   }
 }
 
-ul.posts {
+.posts {
+  .meta {
+    font-style: italic;
+  }
 }
 
 .footer {

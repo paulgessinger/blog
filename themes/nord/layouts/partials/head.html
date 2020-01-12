@@ -3,7 +3,9 @@
 
   <nav class="nav social">
       {{- range $index, $key := .Site.Params.Social -}}
-      <a href="{{ $key.url }}" title="{{ $key.name }}" target="blank"><i class="fab {{ $key.icon }}"></i></a>
+      <a href="{{ $key.url }}" title="{{ $key.name }}" target="blank">
+        <i class="{{ $key.icon }}"></i>
+      </a>
       {{- end -}}
   </nav>
 

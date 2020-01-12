@@ -1,4 +1,4 @@
-baseURL: http://example.org/
+baseURL: https://paulgessinger.com/
 languageCode: en-us
 title: Paul Gessinger
 theme: nord
@@ -6,21 +6,34 @@ pygmentsUseClasses: yes
 params:
   subtitle: Physics, Web Development, Photography
   social:
-    - name: "Github"
-      icon: "fa-github-alt"
+    - name: "Git&zwnj;hub"
+      icon: "fab gh-icon"
       url: "https://github.com/paulgessinger"
-    - name: "Twitter"
-      icon: "fa-twitter"
+    - name: "T&zwnj;witter"
+      icon: "fab tw-icon"
       url: "https://twitter.com/paulgessinger"
-    - name: "Instagram"
-      icon: "fa-instagram"
+    - name: "Inst&zwnj;agram"
+      icon: "fab ig-icon"
       url: "https://www.instagram.com/paulgessinger/"
-    - name: "LinkedIn"
-      icon: "fa-linkedin-in"
+    - name: "Lin&zwnj;kedIn"
+      icon: "fab li-icon"
       url: "https://www.linkedin.com/in/paul-gessinger-1b2387b2/"
-    - name: "Xing"
-      icon: "fa-xing"
+    - name: "X&zwnj;ing"
+      icon: "fab xi-icon"
       url: "https://www.xing.com/profile/Paul_Gessinger"
+    - name: "E-Mail"
+      icon: "far fa-envelope"
+      url: "mailto:hello@paulgessinger.com"
+
+permalinks:
+  posts: posts/:year/:slug
+
+enableEmoji: yes
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: yes
 
 privacy:
   disqus:
