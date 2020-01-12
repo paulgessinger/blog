@@ -39,7 +39,7 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
 ```
 
-Now you’ll obviously need a color scheme that supports these colors so that though see them. One such the would be the [Nord theme](https://github.com/arcticicestudio/nord-vim). They also have colors for iTerm [here](https://github.com/arcticicestudio/nord-iterm2). You can also configure the nord theme in vim so that it prints comments in *italics* like this:
+Now you’ll obviously need a color scheme that supports these colors so that though see them. One such theme would be [Nord](https://github.com/arcticicestudio/nord-vim). They also have colors for iTerm [here](https://github.com/arcticicestudio/nord-iterm2). You can also configure the Nord vim theme so that it prints comments in *italics* like this:
 
 ```
 let g:nord_italic = 1
