@@ -1,12 +1,23 @@
 <div class="header">
 	<h1 class="site-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
 
-  <nav class="nav social">
+  <nav class="nav main">
+		<ul class="flat pages">
+			{{ range .Site.Menus.main }}
+			<li>
+				<a href="{{ .URL }}">{{ .Name }}</a>
+			</li>
+			{{ end }}
+		</ul>
+    <ul class="flat social">
       {{- range $index, $key := .Site.Params.Social -}}
+      <li>
       <a href="{{ $key.url }}" title="{{ $key.name }}" target="blank">
         <i class="{{ $key.icon }}"></i>
       </a>
+      </li>
       {{- end -}}
+    </ul>
   </nav>
 
 	<div class="site-description">
@@ -14,14 +25,4 @@
 		<h2>{{ .Site.Params.Subtitle | markdownify }}</h2>
 		{{- end -}}
 	</div>
-
-	<nav class="nav main">
-		<ul class="flat">
-			{{ range .Site.Menus.main }}
-			<li>
-				<a href="{{ .URL }}">{{ .Name }}</a>
-			</li>
-			{{ end }}
-		</ul>
-	</nav>
 </div>

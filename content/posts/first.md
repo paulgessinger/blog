@@ -1,7 +1,9 @@
 ---
 title: First post on Hugo!
 date: 2020-01-12T16:50:19+01:00
-description: First post using Hugo!
+description: Some info and a few details on this site.
+tags:
+  - Web
 ---
 
 This theme is using the colors from the [Nord](https://www.nordtheme.com/)

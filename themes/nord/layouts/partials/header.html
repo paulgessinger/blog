@@ -29,7 +29,6 @@
 	<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet"> -->
 
   {{ $style := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | resources.ToCSS | resources.Minify}}
-  {{ $secureCSS := $style | resources.Fingerprint "sha512" }}
-  <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $secureCSS.Data.Integrity }}">
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
 
 </head>
