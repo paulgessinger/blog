@@ -106,6 +106,8 @@ strong {
   hyphens: auto;
   img {
     max-width: 100%;
+    margin: 0 auto;
+    display: block;
   }
 }
 
@@ -145,9 +147,18 @@ figure {
   }
 }
 
-.highlight {
+code {
   background: $nord0;
-  padding: 0.2em 1em;
+  padding: 0 0.2em;
+  border-radius: 0.1em;
+}
+
+pre {
+  code {
+    padding: 1em 1em;
+    display: block;
+    overflow-y: scroll;
+  }
 }
 
 h1,
