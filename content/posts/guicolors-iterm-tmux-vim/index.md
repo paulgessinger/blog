@@ -1,6 +1,6 @@
 ---
 title: Full GUI colors in iTerm, tmux and vim
-date: 2020-01-13T16:12:46+01:00
+date: 2020-01-13T10:00:00+01:00
 tags:
   - Terminal
   - Vim
