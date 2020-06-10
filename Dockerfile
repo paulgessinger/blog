@@ -3,9 +3,10 @@ FROM klakegg/hugo:ext AS builder
 COPY . /src
 WORKDIR /src
 
-ENV HUGO_BASEURL="http://localhost:8080"
+ARG HUGO_BASEURL
+ENV HUGO_BASEURL=${HUGO_BASEURL}
 
-RUN hugo #--minify
+RUN hugo --minify
 RUN ls
 
 FROM nginx
