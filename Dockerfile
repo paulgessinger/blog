@@ -10,8 +10,10 @@ RUN hugo --minify
 RUN ls
 
 FROM nginx
+WORKDIR /app
+
+COPY CHECKS /app/
 
 COPY --from=builder /src/public /usr/share/nginx/html
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-
