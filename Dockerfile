@@ -13,6 +13,7 @@ FROM nginx
 WORKDIR /app
 
 COPY CHECKS /app/
+COPY nginx.conf.sigil .
 
 COPY --from=builder /src/public /usr/share/nginx/html
 
